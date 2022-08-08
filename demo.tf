@@ -178,7 +178,7 @@ resource "aws_instance" "demoinstance1" {
     private_key = "${file(var.private_key)}"
     # Type of connection
     type = "ssh"
-    host = self.ipv4_address
+    host = self.ip_address
   }
   
   # Installing splunk & creating distributed indexer clustering on newly created instance
